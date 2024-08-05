@@ -3,36 +3,100 @@ body {
     width: 100vw;
     background-color: grey;
     color: black;
-    border: 5px solid rgb(130, 130, 130);
-    display: grid;
-    grid-auto-flow: dense;
+    display: flex;
     align-items: stretch;
     align-content: stretch;
-    margin: 0;
-    padding: 0;
-    
+    flex-flow: column nowrap;
+    margin: 0px !important;
+	padding: 0px !important;
+	border: 0px solid black !important;
+    color: black;
 
+.left, .middle, .right {
+    padding: 0 40px;
+}   
+.left {
+    flex: 0 0 auto;
+}
+.middle {
+    flex: 0 0 auto;
+    margin: 0 auto;
 
 }
+.right {
+    flex: 0 0 auto;
+}
+}
+
 .head {
     background-color: #3a343a;
-    margin: 0;
-    width: 100%;
-    height: 15%;
-    padding: 0;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100vw;
+    border: 1px solid black;
 }
 .chosen {
-    background-color: #bcbfc1;
-    width: 100%;
-    height: 2%;
-    text-align: start;
-    margin: 0;
-    padding: 0;
+    background-color: #c2c2c2;
+    height: 30vh;
+    width: 100vw;
+    border: 1px solid black;
+    
 }
-.stats, .itemselector{
-    border: 2px solid #716d68;
-    width: 100%;
-    height: 25%;
-    margin: 0;
-    padding: 0;
+.stats {
+    background-color: #bec0bd;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100vw;
+    border: 1px solid black;
+} 
+
+.itemselector{
+    background-color: #9a9c96;
+    height: 30vh;
+    width: 100vw;
+    border: 1px solid black;
+    border-bottom: 1px solid grey;
+}
+.bottom {
+    background-color: #6b6b6b;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100vw;
+    border: 1px solid grey;
+}
+.miscSelection, 
+.OrderSelection, 
+.TableSelection, 
+.FinalSelection, 
+.ConfigSelection {
+    display: flex;
+    background-color: #5a5a58;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: black;
+    width: 19.5vw;
+    height: 100%;
+    border: 1px solid grey;
+}
+img {
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    display: block;
+    margin-bottom: -10px;
+}
+b {
+    margin-top: 20px;
+    margin-bottom: -10px;
 }
