@@ -10,22 +10,14 @@ body {
     margin: 0px !important;
 	padding: 0px !important;
 	border: 0px solid black !important;
-    color: black;
-
+    font-family: sans-serif !important;
 .left, .middle, .right {
-    padding: 0 40px;
+    flex-wrap: nowrap;
+    padding: 0 5%;
+    flex: 0 0 auto;
 }   
-.left {
-    flex: 0 0 auto;
-}
-.middle {
-    flex: 0 0 auto;
-    margin: 0 auto;
 
-}
-.right {
-    flex: 0 0 auto;
-}
+
 }
 
 .head {
@@ -55,20 +47,55 @@ body {
     width: 100vw;
     border: 1px solid black;
 } 
-
-.itemselector{
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0;
+    row-gap: 0;
+    grid-auto-rows: 12.5vh;
     background-color: #9a9c96;
-    height: 30vh;
+    height: 35vh;
+    width: 100vw;
+    border: 1px solid black;
+    border-bottom: 1px solid grey;
+    overflow-y: scroll;
+}
+
+.grid-item {
+    background-image: linear-gradient(to bottom right,  rgba(255, 255, 255, 255), #eee,   #000);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #908d91;
+    height: 1fr;
+    padding: 0;
+    background-color: #f2f2f2; 
+    /*text-align: center; 
+    line-height: 12.5vh;
+    height: 12.5vh; 
+    align-self: start; */
+    display: flex; /* Flexbox to center text */
+    align-items: start; /* Center vertically */
+    justify-content: start;
+    text-align: start;
+    font-size: 16px;
+    
+    
+}
+
+.grid-container{
+    
+    background-color: #9a9c96;
+    height: 35vh;
     width: 100vw;
     border: 1px solid black;
     border-bottom: 1px solid grey;
 }
 .bottom {
     background-color: #6b6b6b;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: center;
     width: 100vw;
     border: 1px solid grey;
@@ -88,7 +115,11 @@ body {
     height: 100%;
     border: 1px solid grey;
 }
-img {
+.miscSelection img,
+.OrderSelection img,
+.TableSelection img,
+.FinalSelection img, 
+.ConfigSelection img{
     align-items: center;
     text-align: center;
     width: 20%;
@@ -96,7 +127,10 @@ img {
     display: block;
     margin-bottom: -10px;
 }
-b {
+
+.bottomButton {
+    background-color: #5a5a58;
+    border: 0;
     margin-top: 20px;
     margin-bottom: -10px;
 }
