@@ -506,6 +506,12 @@ function create (element) {
       gridItem.innerText = item.itemName;
       gridItem.className = "grid-item";
       gridContainer.appendChild(gridItem);
-    }  
+
+    }
+    for (let i = 0; i < 7; i++) {
+      gridItem = document.createElement("div");
+      gridItem.className = "invisible"
+      gridContainer.appendChild(gridItem)
+    } 
   }
 }

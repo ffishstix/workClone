@@ -12,6 +12,7 @@ body {
 	border: 0px  hidden black !important;
     font-family: sans-serif !important;
     z-index: -1;
+    overflow: hidden;
 }
 .seperate-wrap {
     position: relative;
@@ -34,8 +35,8 @@ body {
     border-left: 1px hidden;
     border-right: 1px hidden;
     border-bottom: 1px solid grey;
-    z-index: 2;
-    bottom: 14vh;
+    z-index: 3;
+    bottom: 15vh;
 
     
 }
@@ -80,12 +81,13 @@ body {
     row-gap: 0;
     grid-auto-rows: 12.5vh;
     background-color: #9a9c96;
-    height: 35vh;
+    height: 45vh;
     width: 100vw;
     border: 1px solid black;
     border-bottom: 1px solid grey;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 1;
+    overflow: auto;
 }
 
 .grid-item {
@@ -110,17 +112,16 @@ body {
     
     
 }
-
-.grid-container{
-    
-    background-color: #9a9c96;
-    height: 45vh;
-    width: 100vw;
-    border: 1px solid black;
-    border-bottom: 1px solid grey;
+.invisible {
+    border: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
 }
+
+
 .bottom {
-    position: absolute;
+    position: fixed;
     bottom: 0%;
     background-color: #6b6b6b;
     height: 15vh;
@@ -130,6 +131,7 @@ body {
     align-items: center;
     width: 100vw;
     border: 1px solid grey;
+    z-index: 2;
 }
 .miscSelection, 
 .OrderSelection, 
