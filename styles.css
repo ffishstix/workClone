@@ -9,16 +9,42 @@ body {
     flex-flow: column nowrap;
     margin: 0px !important;
 	padding: 0px !important;
-	border: 0px solid black !important;
+	border: 0px  hidden black !important;
     font-family: sans-serif !important;
+    z-index: -1;
+}
+.seperate-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.attached-left{
+    left: 20vw;
+}
+.hook-left, .attached-left {
+    
+    position: fixed;
+    background-color: #494949;
+    color: #e7e4df;
+    width: 20vw;
+    height: 12.5vh;
+    border-top: 1px hidden;
+    border-left: 1px hidden;
+    border-right: 1px hidden;
+    border-bottom: 1px solid grey;
+    z-index: 2;
+    bottom: 14vh;
+
+    
+}
+
 .left, .middle, .right {
     flex-wrap: nowrap;
     padding: 0 5%;
     flex: 0 0 auto;
 }   
-
-
-}
 
 .head {
     background-color: #3a343a;
@@ -59,6 +85,7 @@ body {
     border: 1px solid black;
     border-bottom: 1px solid grey;
     overflow-y: scroll;
+    z-index: 1;
 }
 
 .grid-item {
@@ -87,12 +114,14 @@ body {
 .grid-container{
     
     background-color: #9a9c96;
-    height: 35vh;
+    height: 45vh;
     width: 100vw;
     border: 1px solid black;
     border-bottom: 1px solid grey;
 }
 .bottom {
+    position: absolute;
+    bottom: 0%;
     background-color: #6b6b6b;
     height: 15vh;
     display: flex;

@@ -263,7 +263,6 @@ const defaultOptions = [
   {"itemName": "Allergy", "Order": 13, "Price": null},
   {"itemName": "Sides", "Order": 14, "Price": null},
   {"itemName": "No", "Order": 15, "Price": null},
-  ,
 ];const mainOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
