@@ -63,7 +63,9 @@ body {
 
 .grid-item {
     background-image: linear-gradient(to bottom right,  rgba(255, 255, 255, 255), #eee,   #000);
+    background-color: grey;
     background-position: center;
+    text-wrap: wrap;
     background-size: cover;
     border: 1px solid #908d91;
     height: 1fr;
