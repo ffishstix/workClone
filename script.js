@@ -25,20 +25,27 @@ const BeerOptions = [
     { "ItemName": "Old Mout Strawb + Apple", "Order": 23, "Price": null }
   ];
   
+function removeBlock() {
+    var gridContainer = document.querySelector(".grid-container");
+    for (var item of gridContainer.children) {
+      const childToRemove = gridContainer.firstElementChild;
+      console.log(childToRemove.innerHTML)
+      if (childToRemove) {
+        
+        childToRemove.remove();
+      }
+    }
+}
 
 function createBeer() {
         var gridContainer = document.querySelector('.grid-container');
         var gridItem = document.createElement("div");
-        console.log(gridContainer.price)
-        gridItem.className = "grid-item";
-        gridItem.innerText = "test"
-        console.log(gridContainer)
-        gridContainer.appendChild(gridItem)
-        for (const item of BeerOptions) {
-            
+        for (var item of BeerOptions) {
+          gridItem = document.createElement("div");
+          console.log(item)
+          gridItem.setAttribute("Price", item.Price);
+          gridItem.innerText = item.ItemName;
+          gridItem.className = "grid-item";
+          gridContainer.appendChild(gridItem);
         } 
-
-
-        
-
 }
