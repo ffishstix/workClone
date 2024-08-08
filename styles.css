@@ -14,6 +14,7 @@ body {
     z-index: -1;
     overflow: hidden;
 }
+
 .seperate-wrap {
     position: relative;
     width: 100%;
@@ -21,12 +22,15 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .attached-left{
     left: 20vw;
 }
+
 .back {
     right: 0;
 }
+
 .hook-left, .attached-left, .back{
     
     position: fixed;
@@ -60,6 +64,7 @@ body {
     width: 100vw;
     border: 1px solid black;
 }
+
 .chosen {
     background-color: #c2c2c2;
     height: 30vh;
@@ -67,6 +72,7 @@ body {
     border: 1px solid black;
     
 }
+
 .stats {
     background-color: #bec0bd;
     height: 10vh;
@@ -77,6 +83,7 @@ body {
     width: 100vw;
     border: 1px solid black;
 } 
+
 .grid-container {
     display: grid;
     position: fixed;
@@ -118,13 +125,13 @@ body {
     
     
 }
+
 .invisible {
     border: hidden;
     padding: 0;
     margin: 0;
     background-color: inherit;
 }
-
 
 .bottom {
     position: fixed;
