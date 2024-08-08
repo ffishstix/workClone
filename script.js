@@ -54,7 +54,7 @@ const defaultOptions = [
     { "itemName": "Lemonade", "Order": 33, "Price": null},
     { "itemName": "Soda Water", "Order": 34, "Price": null},
     { "itemName": "Cordial", "Order": 35, "Price": null}
-];const softOptions = [
+];const softdrinkOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": 0},
   {"itemName": "Food Misc", "Order": 1, "Price": 0},
   { "itemName": "Cordial" , "Order": 2 , "Price": null},
@@ -81,7 +81,7 @@ const defaultOptions = [
   { "itemName": "Pepsi", "Order": 23, "Price": null },
   { "itemName": "Lemonade", "Order": 24, "Price": null }
 
-];const spirOptions = [
+];const spiritsOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": 0},
   {"itemName": "Food Misc", "Order": 1, "Price": 0},
   {"itemName": "Famous grouse", "Order": 2, "Price": 330},
@@ -143,7 +143,7 @@ const defaultOptions = [
   {"itemName": "Lemonade large dash", "Order": 28, "Price": 130},
   {"itemName": "Soda small dash", "Order": 29, "Price": 50},
   {"itemName": "Soda large dash", "Order": 30, "Price": 80}
-];const breaOptions = [
+];const breakfastOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": 0},
   {"itemName": "Food Misc", "Order": 1, "Price": 0},
   {"itemName": "3-item", "Order": 2, "Price": null},
@@ -179,7 +179,7 @@ const defaultOptions = [
   {"itemName": "Granary X1", "Order": 33, "Price": null},
   {"itemName": "To be cont", "Order": 0, "Price": null},
   {"itemName": "End of order", "Order": 0, "Price": null}
-];const barOptions  = [
+];const barsnackssundryOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Salted nuts", "Order": 2, "Price": 150},
@@ -193,7 +193,7 @@ const defaultOptions = [
   {"itemName": "Bacon fries", "Order": 10, "Price": 130},
   {"itemName": "Beef crisps", "Order": 11, "Price": 150}
   
-];const hotOptions  = [
+];const hotbevOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": 0},
   {"itemName": "Food Misc", "Order": 1, "Price": 0},
   {"itemName": "Floater coffee", "Order": 12, "Price": 330},
@@ -215,7 +215,7 @@ const defaultOptions = [
   {"itemName": "Separate milk", "Order": 12, "Price": null},
   {"itemName": "Irish coffee", "Order": 12, "Price": null}
   
-];const cockOptions = [
+];const cocktailOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Bramble", "Order": 2, "Price": 695},
@@ -232,7 +232,7 @@ const defaultOptions = [
   {"itemName": "Snow ball", "Order": 13, "Price": 450},
   {"itemName": "Shot of prosecco", "Order": 14, "Price": 100}
     
-];const tobaOptions = [
+];const tobaccoOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "B&H sky blue s/k", "Order": 2, "Price": 1300},
@@ -246,7 +246,7 @@ const defaultOptions = [
   {"itemName": "Henri winter mans", "Order": 10, "Price": 1300},
   {"itemName": "Hamlet", "Order": 11, "Price": 750},
   {"itemName": "Vape", "Order": 12, "Price": 600}  
-];const starOptions = [
+];const startersOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "**training**", "Order": 2, "Price": null},
@@ -263,7 +263,7 @@ const defaultOptions = [
   {"itemName": "Allergy", "Order": 13, "Price": null},
   {"itemName": "Sides", "Order": 14, "Price": null},
   {"itemName": "No", "Order": 15, "Price": null},
-];const mainOptions = [
+];const mainsOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Classic beefburger", "Order": 2, "Price": 13.95},
@@ -293,7 +293,7 @@ const defaultOptions = [
   {"itemName": "End of order", "Order": 26, "Price": null},
   {"itemName": "To be cont", "Order": 27, "Price": null},
   {"itemName": "Sides", "Order": 28, "Price": null}
-];const roasOptions = [
+];const roastsOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Roast small pork", "Order": 2, "Price": 1095},
@@ -324,7 +324,7 @@ const defaultOptions = [
   {"itemName": "No", "Order": 27, "Price": null}
   
 
-];const specOptions = [
+];const specialsOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "L/fries clucknbull", "Order": 2, "Price": 1095},
@@ -348,7 +348,7 @@ const defaultOptions = [
   {"itemName": "No", "Order": 20, "Price": null}
   
   
-];const luncOptions = [
+];const lunchOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Brunch small", "Order": 2, "Price": 1050},
@@ -387,7 +387,7 @@ const defaultOptions = [
   {"itemName": "Allergy", "Order": 9, "Price": null},
   {"itemName": "Sides", "Order": 10, "Price": null},
   {"itemName": "No", "Order": 11, "Price": null}
-];const sundOptions = [
+];const sundayeveOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Camembert", "Order": 2, "Price": 895},
@@ -427,7 +427,7 @@ const defaultOptions = [
   {"itemName": "End", "Order": 36, "Price": null},
   {"itemName": "Cont", "Order": 37, "Price": null},
   {"itemName": "No", "Order": 38, "Price": null}
-];const dessOptions = [
+];const dessertsOptions  = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Choc brownie gf", "Order": 2, "Price": 750},
@@ -442,28 +442,35 @@ const defaultOptions = [
   {"itemName": "Allergy", "Order": 11, "Price": null},
   {"itemName": "Sides", "Order": 12, "Price": null},
   {"itemName": "No", "Order": 13, "Price": null}
-];const tuesOptions = [
+];const tuesdaychippyteaOptions = [
   {"itemName": "Bar Misc", "Order": 0, "Price": null},
   {"itemName": "Food Misc", "Order": 1, "Price": null},
   {"itemName": "Cod and chips (tct)", "Order": 2, "Price": 1395},
   {"itemName": "Battered sausage and chips", "Order": 3, "Price": 1095},
   {"itemName": "Half roast chicken", "Order": 4, "Price": 1295},
   {"itemName": "Homemade pie and chips", "Order": 5, "Price": 1395},
-  {"itemName": "Curry sauce", "Order": 6, "Price": 200},
+  {"itemName": "Curry  sauce", "Order": 6, "Price": 200},
   {"itemName": "Mushy peas", "Order": 7, "Price": 100},
   {"itemName": "Bakes beans", "Order": 8, "Price": 100},
   {"itemName": "Bread roll & butter", "Order": 9, "Price": 200},
   {"itemName": "Coleslaw", "Order": 10, "Price": 200},
   {"itemName": "Sides no", "Order": 11, "Price": null}
+];const halfOptions = [
+  {"itemName": "to be worked on", "Order": 0, "Price": null}
+];const ptjugOptions = [
+  {"itemName": "to be worked on", "Order": 0, "Price": null}
 ];
+
 mainmenu()
 function removeBlock() {
     var gridContainer = document.querySelector(".grid-container");
     gridContainer.innerHTML = "";
 }
 
+
 function mainmenu() {
   removeBlock()
+  toggleRow()
   var gridContainer = document.querySelector('.grid-container');
   var gridItem
   for (var item of defaultOptions) {
@@ -476,7 +483,24 @@ function mainmenu() {
         } 
 }
 function create (element) {
-  const itemText = element.textContent.trim().toLowerCase().substring(0,4).trim();
+  toggleRow()
+  
+  const unacceptableElements = ["0", "1", "2", "3", 
+    "4", "5","6", "7", "8", "9", "`", "¬", "!", "£", 
+    "$", "%", "^", "&", "*", "(",")", "-", "_", "=", 
+    "+", "{", "[", "}", "]", ";", ":", "'", "@", "#", 
+    "~", ",", "<", ">", ".", "?", "/", "|", " "]
+  let itemText = element.textContent.toLowerCase();
+  let nextText = ""
+  for (let i = 0; i < itemText.length; i++) { 
+    if (!(unacceptableElements.includes(itemText[i]))){
+      nextText = nextText + itemText[i]
+      console.log(nextText)
+    }
+  }
+  
+  nextText.substring(0,4).trim()
+  itemText = nextText
   console.log(`ItemText: ${itemText}`, `Type of itemText: ${typeof itemText}`);
   const searchTerm = (itemText + "Options");
   const optionsArrayName = searchTerm;
@@ -513,5 +537,47 @@ function create (element) {
       gridItem.className = "invisible"
       gridContainer.appendChild(gridItem)
     } 
+  }
+}
+
+
+function toggleRow() {
+  const bottom = document.querySelector('.bottom');
+  console.log(bottom)
+  const classesToRemove = ["back", "attached-left", "hook-left"];
+  let iscontain = false
+  const children = bottom.children
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    if (classesToRemove.some(cls => 
+      child.classList.contains(cls))) {
+      iscontain = true;
+      break;
+    }
+  }
+
+  if (iscontain) {
+    Array.from(children).forEach(child => {
+        if (classesToRemove.some(cls => child.classList.contains(cls))) {
+            child.remove(); // Remove the child element
+        }
+    });
+  } 
+  else{
+  var Half = document.createElement("button");
+  var ptJug = document.createElement("button");
+  var back = document.createElement("button");
+  back.setAttribute("onclick", "mainmenu()");
+  back.innerHTML = "<h1>back</h1>";
+  back.className = "back";
+  bottom.appendChild(back);
+  ptJug.setAttribute("onclick", "create(this)");
+  ptJug.innerHTML = "<h1>4pt Jug</h1>";
+  ptJug.className = "attached-left";
+  bottom.appendChild(ptJug);
+  Half.setAttribute("onclick", "create(this)");
+  Half.innerHTML = "<h1>Half</h1>";
+  Half.className = "hook-left";
+  bottom.appendChild(Half);
   }
 }

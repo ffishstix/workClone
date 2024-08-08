@@ -24,7 +24,10 @@ body {
 .attached-left{
     left: 20vw;
 }
-.hook-left, .attached-left {
+.back {
+    right: 0;
+}
+.hook-left, .attached-left, .back{
     
     position: fixed;
     background-color: #494949;
@@ -76,6 +79,8 @@ body {
 } 
 .grid-container {
     display: grid;
+    position: fixed;
+    bottom: 15vh;
     grid-template-columns: repeat(8, 1fr);
     gap: 0;
     row-gap: 0;
@@ -85,9 +90,9 @@ body {
     width: 100vw;
     border: 1px solid black;
     border-bottom: 1px solid grey;
-    overflow-y: auto;
+    overflow-y: hidden;
     z-index: 1;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .grid-item {
@@ -99,7 +104,7 @@ body {
     border: 1px solid #908d91;
     height: 1fr;
     padding: 0;
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
     /*text-align: center; 
     line-height: 12.5vh;
     height: 12.5vh; 
