@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome",
-            "url": "C:/Users/finla/OneDrive/Documents/git/manual-connections/workClone/index.html",
+            "url": "C:/Users/finla/OneDrive/Documents/git/workClone/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

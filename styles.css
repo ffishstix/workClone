@@ -58,6 +58,7 @@ body {
     background-color: #3a343a;
     height: 10vh;
     display: flex;
+    position: fixed;
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center;
@@ -66,17 +67,28 @@ body {
 }
 
 .chosen {
+    display: flex;
+    top: 10vh;
+    position: fixed;
+    flex-flow: column nowrap;
     background-color: #c2c2c2;
     height: 30vh;
     width: 100vw;
     border: 1px solid black;
+    overflow-y: auto;
+    overflow: auto;
     
 }
-
+p {
+    padding: inherit;
+    margin: inherit;
+}
 .stats {
+    top: 29.9vh;
+    display: flex;
+    position: fixed;
     background-color: #bec0bd;
     height: 10vh;
-    display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center;
