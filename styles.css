@@ -15,6 +15,71 @@ body {
     overflow: hidden;
 }
 
+.overlay-forground {
+    z-index: 11;
+    color: #ffffff;
+    background-color: #6c6e71;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border: 4px hidden black;
+    flex-flow: column nowrap;
+    top: 15%;
+    left: 7.5%;
+    height: 65%;
+    width: 85%;
+}
+
+.overlay-background {
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    border: 4px solid black;
+    top: 15%;
+    left: 7.5%;
+    opacity: 20%;
+    height: 65%;
+    width: 85%;
+    box-shadow: black;
+}
+
+.rounded-box {
+    background-color: #fff;
+    width: 70%;
+    height: 10%;
+    border-radius: 10px;
+}
+.centered-div {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0;
+    row-gap: 0;
+    grid-auto-rows: 25vh;
+    height: 45vh;
+    width: 50vw;
+
+
+}
+.number-option {
+    display: flex; /* Flexbox to center text */
+    align-items: start; /* Center vertically */
+    justify-content: start;
+    position: fixed;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    background-color: #c0c0c0;
+    color: #fff;
+
+}
+
 .seperate-wrap {
     position: relative;
     width: 100%;
@@ -77,12 +142,16 @@ body {
     border: 1px solid black;
     overflow-y: auto;
     overflow: auto;
+    box-sizing: border-box;
     
 }
+
 p {
     padding: inherit;
     margin: inherit;
+    box-sizing: border-box;
 }
+
 .stats {
     top: 29.9vh;
     display: flex;
@@ -173,6 +242,7 @@ p {
     height: 100%;
     border: 1px solid grey;
 }
+
 .miscSelection img,
 .OrderSelection img,
 .TableSelection img,

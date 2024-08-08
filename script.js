@@ -460,10 +460,22 @@ const defaultOptions =            [
 ];const ptjugOptions =            [
   {"itemName": "to be worked on", "Order": 0, "price": null}
 ];
-
+function roundNumber(num, scale) {
+  if(!("" + num).includes("e")) {
+    return +(Math.round(num + "e+" + scale)  + "e-" + scale);
+  } else {
+    var arr = ("" + num).split("e");
+    var sig = ""
+    if(+arr[1] + scale > 0) {
+      sig = "+";
+    }
+    return +(Math.round(+arr[0] + "e" + sig + (+arr[1] + scale)) + "e-" + scale);
+  }
+}
 mainmenu()
 let currentItems = []
 let qty = 0
+let currentPrice = 0.00
 function removeBlock() {
     var gridContainer = document.querySelector(".grid-container");
     gridContainer.innerHTML = "";
@@ -585,24 +597,38 @@ function toggleRow() {
   }
 }
 
-function updateLeft() {
-  let tap = document.querySelector(".lstat")
-  tap.innerText = "Qty " + String(qty)
-} 
-function updateRight() {
-  //tbd lols am going bed
+function updateStat() {
+  let right = document.querySelector(".rstat");
+  right.innerText = "Total £" + String(currentPrice);
+  let tap = document.querySelector(".lstat");
+  tap.innerText = "Qty " + String(qty);
 }
+
 function chosen(item) {
   console.log(item);
-  console.log(item.price)
   const itemName = item.id ;
   const price = item.getAttribute("price");
+  console.log(price);
   var container = document.querySelector(".chosen");
   displayItem = document.createElement("p");
   displayItem.setAttribute("price", price);
   displayItem.textContent = itemName;
   displayItem.className = "chosen-item";
   container.appendChild(displayItem);
-  qty += 1
-  updateLeft()
+  if (!(price === "null" || price === "0")) {
+    try {
+      const intPrice = roundNumber((Number(price) / 100), 2);
+      console.log("int price is: " + intPrice);
+      console.log("current price: " + currentPrice);
+      currentPrice = roundNumber((intPrice + currentPrice), 2);
+      console.log("now current price: " + currentPrice);
+      
+    }
+    catch (error){
+      console.error(error);
+    }
+  }
+  
+  qty += 1;
+  updateStat();
 }
