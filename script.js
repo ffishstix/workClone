@@ -460,8 +460,8 @@ const defaultOptions =            [
 ];const ptjugOptions =            [
   {"itemName": "to be worked on", "Order": 0, "price": null}
 ]; const clerks = [
-  {24: "Fin"},
-  {69: "Paul"}
+  {"24": "Fin"},
+  {"69": "Paul"}
 ];
 function roundNumber(num, scale) {
   if(!("" + num).includes("e")) {
@@ -666,7 +666,14 @@ function toggleOverlay() {
 
 }
 function checkValid() {
+  try {
+    const temp = clerks.currentClerk
+    currentClerk = temp
+  }
+  catch(error) {
 
+    console.log(error)
+  }
 }
 
 function clerk(buttonPressed) {
@@ -679,24 +686,37 @@ function clerk(buttonPressed) {
       toggleOverlay();
     }
     else {
-      if (output === "o"){
-        checkValid();
-      }
-      else {
-        
-      }
-
-
+      currentClerk = ""
     }
   }
   else {
-    try {
-      const intoutput = Number(output);
-      currentClerk += output;
+    if (output === "o") {
+      checkValid()
     }
-    catch (error){
-      console.error(error);
-    }
+    else {
 
+      try {
+        const intoutput = Number(output);
+        currentClerk += output;
+        console.log(currentClerk)
+      }
+      catch (error){
+        console.error(error);
+      }
+    }
   }
+  const bodyText = document.querySelector(".sub-rounded");
+  var hidden = ""
+  try {
+    if (!(currentClerk === "")) {
+      for (let i = 0; i < currentClerk.length; i++) {
+        hidden += "*"
+      }
+    }
+  }
+  catch {
+    hidden = ""
+  }
+  bodyText.innerHTML = hidden;
+  console.log("completed, updated " + bodyText + " and updated with: " + hidden);
 }

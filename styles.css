@@ -47,11 +47,25 @@ body {
     box-shadow: black;
 }
 
+.sub-rounded {
+    padding: 0;
+    margin: 0;
+    border: 0 hidden;
+    z-index: 10;
+    color: black;
+    font-size: 50px;
+    
+
+}
+
 .rounded-box {
     background-color: #fff;
     width: 70%;
     height: 10%;
     border-radius: 10px;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
 }
 .centered-div {
     display: grid;
