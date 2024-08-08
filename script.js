@@ -459,6 +459,9 @@ const defaultOptions =            [
   {"itemName": "to be worked on", "Order": 0, "price": null}
 ];const ptjugOptions =            [
   {"itemName": "to be worked on", "Order": 0, "price": null}
+]; const clerks = [
+  {24: "Fin"},
+  {69: "Paul"}
 ];
 function roundNumber(num, scale) {
   if(!("" + num).includes("e")) {
@@ -472,10 +475,13 @@ function roundNumber(num, scale) {
     return +(Math.round(+arr[0] + "e" + sig + (+arr[1] + scale)) + "e-" + scale);
   }
 }
+
 mainmenu()
 let currentItems = []
 let qty = 0
 let currentPrice = 0.00
+let currentClerk = ""
+
 function removeBlock() {
     var gridContainer = document.querySelector(".grid-container");
     gridContainer.innerHTML = "";
@@ -631,4 +637,66 @@ function chosen(item) {
   
   qty += 1;
   updateStat();
+}
+
+function toggleOverlay() {
+  var overlayTrue = false
+  const overlay = document.querySelector(".overlay-forground");
+  console.log(overlay.children);
+  const classesToRemove = ["removable"]
+  const children = overlay.children;
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    if (classesToRemove.some(cls => 
+      child.classList.contains(cls))) {
+      overlayTrue = true;
+      console.log("here");
+      break;
+    }
+  }
+  if (overlayTrue) {
+    overlay.remove();
+  }
+  else {
+    console.log("here");
+
+
+
+  }
+
+}
+function checkValid() {
+
+}
+
+function clerk(buttonPressed) {
+  console.log(buttonPressed);
+  const input = buttonPressed.id;
+  console.log(input);
+  const output = input[0].toLowerCase();
+  if (output === "e") {
+    if (currentClerk == "") {
+      toggleOverlay();
+    }
+    else {
+      if (output === "o"){
+        checkValid();
+      }
+      else {
+        
+      }
+
+
+    }
+  }
+  else {
+    try {
+      const intoutput = Number(output);
+      currentClerk += output;
+    }
+    catch (error){
+      console.error(error);
+    }
+
+  }
 }

@@ -56,20 +56,23 @@ body {
 .centered-div {
     display: grid;
     position: relative;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 125px);
     gap: 0;
     row-gap: 0;
-    grid-auto-rows: 25vh;
+    grid-auto-rows: auto;
     height: 45vh;
-    width: 50vw;
+    width: 125px;
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    text-align: center;
 
 
 }
 .number-option {
     display: flex; /* Flexbox to center text */
     align-items: start; /* Center vertically */
-    justify-content: start;
-    position: fixed;
+    justify-content: center;
+    
     align-content: center;
     text-align: center;
     border-radius: 10px;
@@ -77,6 +80,11 @@ body {
     width: 100px;
     background-color: #c0c0c0;
     color: #fff;
+    border: 0px hidden;
+    margin: 0;
+    padding: 0;
+    border: 2px solid black;
+    font-size: 22px;
 
 }
 
