@@ -462,11 +462,11 @@ const defaultOptions = [
 ];
 
 mainmenu()
+
 function removeBlock() {
     var gridContainer = document.querySelector(".grid-container");
     gridContainer.innerHTML = "";
 }
-
 
 function mainmenu() {
   removeBlock()
@@ -482,6 +482,7 @@ function mainmenu() {
     gridContainer.appendChild(gridItem);
         } 
 }
+
 function create (element) {
   toggleRow()
   
@@ -532,14 +533,14 @@ function create (element) {
       gridContainer.appendChild(gridItem);
 
     }
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 8; i++) {
       gridItem = document.createElement("div");
       gridItem.className = "invisible"
       gridContainer.appendChild(gridItem)
+      console.log("here")
     } 
   }
 }
-
 
 function toggleRow() {
   const bottom = document.querySelector('.bottom');
@@ -580,4 +581,10 @@ function toggleRow() {
   Half.className = "hook-left";
   bottom.appendChild(Half);
   }
+}
+
+function chosen(item) {
+  chosenName = item.itemName
+  chosenPrice = item.Price
+
 }
