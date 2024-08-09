@@ -670,13 +670,22 @@ function checkValid() {
   var tempval = false;
   console.log("here");
   for (let j = 0; j < clerks.length; j++) {
-    if (clerks[0].number === currentClerk) {
-      clerkName = j.name;
-       tempval = true;
+    if (clerks[j].number === currentClerk) {
+      console.log(j.name);
+      console.log(clerkName);
+      clerkName = clerks.name;
+      console.log(clerkName);
+      tempval = true;
     }
     console.log("it found it: " + tempval);
   }
-  return tempval;
+  if (tempval) {
+    console.log("returned clerk name " + clerkName)
+    return clerkName;
+  }
+  else {
+    return false
+  }
   
 }
 
@@ -698,33 +707,32 @@ function clerk(buttonPressed) {
       const x = checkValid();
       if (x) {
         toggleOverlay();
+        const bodyText = document.querySelector(".clerkName");
+        bodyText.innerText = clerkName;
       }
       currentClerk = "";
     }
     else {
-
-      try {
-        const intoutput = Number(output);
-        currentClerk += output;
-        console.log(currentClerk);
-      }
-      catch (error){
-        console.error(error);
-      }
+      currentClerk += output;
+      
     }
   }
-  const bodyText = document.querySelector(".clerkName");
+  
   var hidden = "";
   try {
     if (!(currentClerk === "")) {
       for (let i = 0; i < currentClerk.length; i++) {
         hidden += "*";
       }
+      const sq2rt = document.querySelector(".sub-rounded");
+      console.log("here inniot" + hidden);
+      sq2rt.innerText = hidden;
+      console.log(sq2rt);
     }
   }
   catch {
     hidden = "Not Signed On";
   }
-  bodyText.innerText = hidden;
-  console.log("completed, updated " + bodyText + " and updated with: " + hidden);
+  
+  
 }
