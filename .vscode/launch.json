@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
-            "url": "file:///C:/Users/finla/Documents/git/workClone/index.html",
+            "name": "Launch Chrome against localhost",
+            "url": "C:/Users/finla/OneDrive/Documents/git/workClone/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

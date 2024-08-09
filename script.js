@@ -460,8 +460,8 @@ const defaultOptions =            [
 ];const ptjugOptions =            [
   {"itemName": "to be worked on", "Order": 0, "price": null}
 ]; const clerks = [
-  {"24": "Fin"},
-  {"69": "Paul"}
+  {"number": "24", "name": "Fin"},
+  {"number": "69", "name": "Paul"}
 ];
 function roundNumber(num, scale) {
   if(!("" + num).includes("e")) {
@@ -481,6 +481,7 @@ let currentItems = []
 let qty = 0
 let currentPrice = 0.00
 let currentClerk = ""
+let clerkName = ""
 
 function removeBlock() {
     var gridContainer = document.querySelector(".grid-container");
@@ -666,14 +667,17 @@ function toggleOverlay() {
 
 }
 function checkValid() {
-  try {
-    const temp = clerks.currentClerk
-    currentClerk = temp
+  var tempval = false;
+  console.log("here");
+  for (let j = 0; j < clerks.length; j++) {
+    if (clerks[0].number === currentClerk) {
+      clerkName = j.name;
+       tempval = true;
+    }
+    console.log("it found it: " + tempval);
   }
-  catch(error) {
-
-    console.log(error)
-  }
+  return tempval;
+  
 }
 
 function clerk(buttonPressed) {
@@ -686,37 +690,41 @@ function clerk(buttonPressed) {
       toggleOverlay();
     }
     else {
-      currentClerk = ""
+      currentClerk = "";
     }
   }
   else {
     if (output === "o") {
-      checkValid()
+      const x = checkValid();
+      if (x) {
+        toggleOverlay();
+      }
+      currentClerk = "";
     }
     else {
 
       try {
         const intoutput = Number(output);
         currentClerk += output;
-        console.log(currentClerk)
+        console.log(currentClerk);
       }
       catch (error){
         console.error(error);
       }
     }
   }
-  const bodyText = document.querySelector(".sub-rounded");
-  var hidden = ""
+  const bodyText = document.querySelector(".clerkName");
+  var hidden = "";
   try {
     if (!(currentClerk === "")) {
       for (let i = 0; i < currentClerk.length; i++) {
-        hidden += "*"
+        hidden += "*";
       }
     }
   }
   catch {
-    hidden = ""
+    hidden = "Not Signed On";
   }
-  bodyText.innerHTML = hidden;
+  bodyText.innerText = hidden;
   console.log("completed, updated " + bodyText + " and updated with: " + hidden);
 }
