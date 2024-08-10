@@ -521,16 +521,13 @@ function create (element) {
   }
   
   nextText.substring(0,4).trim()
-  itemText = nextText
-  console.log(`ItemText: ${itemText}`, `Type of itemText: ${typeof itemText}`);
-  const searchTerm = (itemText + "Options");
-  const optionsArrayName = searchTerm;
+  const searchTerm = (nextText + "Options");
   let matchedOption;
 
   try {
-    matchedOption = eval(optionsArrayName);
+    matchedOption = eval(searchTerm);
   } catch (e) {
-    console.error(`Options array ${optionsArrayName} not found.`);
+    console.error(`Options array ${searchTerm} not found.`);
     return;
   }
 
@@ -580,7 +577,8 @@ function toggleRow() {
 
   if (iscontain) {
     Array.from(children).forEach(child => {
-        if (classesToRemove.some(cls => child.classList.contains(cls))) {
+        if (classesToRemove.some(cls =>
+           child.classList.contains(cls))) {
             child.remove(); // Remove the child element
         }
     });
@@ -590,16 +588,16 @@ function toggleRow() {
   var ptJug = document.createElement("button");
   var back = document.createElement("button");
   back.setAttribute("onclick", "mainmenu()");
-  back.innerHTML = "<h1>back</h1>";
-  back.className = "back";
-  bottom.appendChild(back);
   ptJug.setAttribute("onclick", "create(this)");
-  ptJug.innerHTML = "<h1>4pt Jug</h1>";
-  ptJug.className = "attached-left";
-  bottom.appendChild(ptJug);
   Half.setAttribute("onclick", "create(this)");
+  back.innerHTML = "<h1>back</h1>";
+  ptJug.innerHTML = "<h1>4pt Jug</h1>";
   Half.innerHTML = "<h1>Half</h1>";
+  back.className = "back";
+  ptJug.className = "attached-left";
   Half.className = "hook-left";
+  bottom.appendChild(back);
+  bottom.appendChild(ptJug);
   bottom.appendChild(Half);
   }
 }
@@ -641,52 +639,127 @@ function chosen(item) {
 }
 
 function toggleOverlay() {
-  var overlayTrue = false
+  console.log("shouldnt be here")
   const overlay = document.querySelector(".overlay-forground");
-  console.log(overlay.children);
-  const classesToRemove = ["removable"]
-  const children = overlay.children;
-  for (let i = 0; i < children.length; i++) {
-    const child = children[i];
-    if (classesToRemove.some(cls => 
-      child.classList.contains(cls))) {
-      overlayTrue = true;
-      console.log("here");
-      break;
-    }
-  }
-  if (overlayTrue) {
+  if (overlay !== null) {
     overlay.remove();
   }
   else {
-    console.log("here");
-
-
+    console.log("here lols")
+    const  num1 = document.createElement("button");
+    const  num2 = document.createElement("button");
+    const  num3 = document.createElement("button");
+    const  num4 = document.createElement("button");
+    const  num5 = document.createElement("button");
+    const  num6 = document.createElement("button");
+    const  num7 = document.createElement("button");
+    const  num8 = document.createElement("button");
+    const  num9 = document.createElement("button");
+    const  num0 = document.createElement("button");
+    const  numE = document.createElement("button");
+    const  numO = document.createElement("button");
+    const invis = document.createElement("div");
+    num1.className = "number-option removable";
+    num2.className = "number-option removable";
+    num3.className = "number-option removable";
+    num4.className = "number-option removable";
+    num5.className = "number-option removable";
+    num6.className = "number-option removable";
+    num7.className = "number-option removable";
+    num8.className = "number-option removable";
+    num9.className = "number-option removable";
+    num0.className = "number-option removable";
+    numE.className = "number-option removable";
+    numO.className = "number-option removable";
+    invis.className = "invisible removable";
+    num1.id = "1-Overlay";
+    num2.id = "2-Overlay";
+    num3.id = "3-Overlay";
+    num4.id = "4-Overlay";
+    num5.id = "5-Overlay";
+    num6.id = "6-Overlay";
+    num7.id = "7-Overlay";
+    num8.id = "8-Overlay";
+    num9.id = "9-Overlay";
+    num0.id = "0-Overlay";
+    numE.id = "Esc-Overlay";
+    numO.id = "Ok-Overlay";
+    num1.onclick = "clerk(this)";
+    num2.onclick = "clerk(this)";
+    num3.onclick = "clerk(this)";
+    num4.onclick = "clerk(this)";
+    num5.onclick = "clerk(this)";
+    num6.onclick = "clerk(this)";
+    num7.onclick = "clerk(this)";
+    num8.onclick = "clerk(this)";
+    num9.onclick = "clerk(this)";
+    num0.onclick = "clerk(this)";
+    numE.onclick = "clerk(this)";
+    numO.onclick = "clerk(this)";
+    num1.innerHTML = "<h1>1</h1>";
+    num2.innerHTML = "<h1>2</h1>";
+    num3.innerHTML = "<h1>3</h1>";
+    num4.innerHTML = "<h1>4</h1>";
+    num5.innerHTML = "<h1>5</h1>";
+    num6.innerHTML = "<h1>6</h1>";
+    num7.innerHTML = "<h1>7</h1>";
+    num8.innerHTML = "<h1>8</h1>";
+    num9.innerHTML = "<h1>9</h1>";
+    num0.innerHTML = "<h1>0</h1>";
+    numE.innerHTML = "<h1>Esc</h1>";
+    numO.innerHTML = "<h1>Ok</h1>";
+    const gibnamttinni = document.createElement("div");
+    gibnamttinni.className = "centered-div removable";
+    gibnamttinni.appendChild(num1);
+    gibnamttinni.appendChild(num2);
+    gibnamttinni.appendChild(num3);
+    gibnamttinni.appendChild(invis);
+    gibnamttinni.appendChild(num4);
+    gibnamttinni.appendChild(num5);
+    gibnamttinni.appendChild(num6);
+    gibnamttinni.appendChild(invis);
+    gibnamttinni.appendChild(num7);
+    gibnamttinni.appendChild(num8);
+    gibnamttinni.appendChild(num9);
+    gibnamttinni.appendChild(numE);
+    gibnamttinni.appendChild(num0);
+    gibnamttinni.appendChild(invis);
+    gibnamttinni.appendChild(invis);
+    gibnamttinni.appendChild(numO);
+    const hh = document.createElement("h1");
+    hh.className = "sub-rounded";
+    const penis = document.createElement("div");
+    penis.className =  "rounded-box removable";
+    penis.appendChild(hh);
+    const cn =  document.createElement("h1");
+    const main = document.createElement("div");
+    main.className = "overlay-forground";
+    main.appendChild(cn);
+    main.appendChild(penis);
+    main.appendChild(gibnamttinni);
 
   }
 
 }
+
 function checkValid() {
   var tempval = false;
   console.log("here");
+  const matchedOption = eval(clerks)
   for (let j = 0; j < clerks.length; j++) {
     if (clerks[j].number === currentClerk) {
-      console.log(j.name);
+      console.log(clerks[j].name);
       console.log(clerkName);
-      clerkName = clerks.name;
+      clerkName = clerks[j].name;
       console.log(clerkName);
       tempval = true;
+      console.log("x in the function: " + clerkName)
+      return clerkName
     }
     console.log("it found it: " + tempval);
   }
-  if (tempval) {
-    console.log("returned clerk name " + clerkName)
-    return clerkName;
-  }
-  else {
-    return false
-  }
-  
+  console.log("x in the function: " + clerkName)
+  return false
 }
 
 function clerk(buttonPressed) {
@@ -705,10 +778,11 @@ function clerk(buttonPressed) {
   else {
     if (output === "o") {
       const x = checkValid();
+      console.log("x is: "  + x)
       if (x) {
         toggleOverlay();
         const bodyText = document.querySelector(".clerkName");
-        bodyText.innerText = clerkName;
+        bodyText.innerHTML = "<h1>" + x  + "</h1>";
       }
       currentClerk = "";
     }
